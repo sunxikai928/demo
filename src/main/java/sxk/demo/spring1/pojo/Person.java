@@ -1,4 +1,4 @@
-package sxk.demo.spring.pojo;
+package sxk.demo.spring1.pojo;
 
 /**
  * Created by sunxikai on 19/8/8.
@@ -8,6 +8,7 @@ public class Person {
     private int age;
 
     public Person(String name, int age) {
+        System.out.println("Person被创建了 name:" + name + ", age:" + age);
         this.name = name;
         this.age = age;
     }

@@ -1,4 +1,4 @@
-package sxk.demo.spring.web;
+package sxk.demo.spring1.web;
 
 import org.springframework.stereotype.Controller;
 

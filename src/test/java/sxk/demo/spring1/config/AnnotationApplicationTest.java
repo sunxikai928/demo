@@ -1,8 +1,9 @@
-package sxk.demo.spring.annotation.config;
+package sxk.demo.spring1.config;
 
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import sxk.demo.spring.pojo.Person;
+import sxk.demo.spring.annotation.config.MainConfig;
+import sxk.demo.spring1.pojo.Person;
 
 /**
  * Created by sunxikai on 19/8/9.
@@ -36,9 +37,17 @@ public class AnnotationApplicationTest {
         当注解打在接口上的时候是无法获取该bean的
         app.getBean("personDao");
          */
+        // 拿出所有的 bean 的定义
         String[] definitions = app.getBeanDefinitionNames();
         for (String definition : definitions) {
             System.out.println(definition);
         }
+    }
+
+    @Test
+    public void testMainConfig4() {
+        AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(MainConfig4.class);
+        System.out.println("容器加载完成");
+        app.getBean("person");
     }
 }

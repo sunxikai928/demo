@@ -1,12 +1,12 @@
-package sxk.demo.spring.annotation.config;
+package sxk.demo.spring1.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Service;
-import sxk.demo.spring.dao.PersonDao;
-import sxk.demo.spring.service.PersonService;
-import sxk.demo.spring.web.PersonRest;
+import sxk.demo.spring1.dao.PersonDao;
+import sxk.demo.spring1.service.PersonService;
+import sxk.demo.spring1.web.PersonRest;
 
 /**
  * spring配置了类
@@ -37,7 +37,7 @@ value：指定在该规则下过滤的表达式；
 @Configuration
 @ComponentScan(
         // 配置基础注解包
-        value = "sxk.demo.spring",
+        value = "sxk.demo.spring1",
         // 是否懒加载，默认是 false
         lazyInit = true,
         // 指定只包含的组件

@@ -1,4 +1,4 @@
-package sxk.demo.spring.annotation.config;
+package sxk.demo.spring1.config;
 
 import org.springframework.core.io.Resource;
 import org.springframework.core.type.AnnotationMetadata;
@@ -6,7 +6,7 @@ import org.springframework.core.type.ClassMetadata;
 import org.springframework.core.type.classreading.MetadataReader;
 import org.springframework.core.type.classreading.MetadataReaderFactory;
 import org.springframework.core.type.filter.TypeFilter;
-import sxk.demo.spring.service.IPersonService;
+import sxk.demo.spring1.service.IPersonService;
 
 import java.io.IOException;
 
