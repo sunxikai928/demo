@@ -2,7 +2,6 @@ package sxk.demo.spring1.config;
 
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import sxk.demo.spring.annotation.config.MainConfig;
 import sxk.demo.spring1.pojo.Person;
 
 /**

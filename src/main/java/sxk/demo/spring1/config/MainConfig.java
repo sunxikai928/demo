@@ -1,8 +1,9 @@
-package sxk.demo.spring.annotation.config;
+package sxk.demo.spring1.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import sxk.demo.spring.pojo.Person;
+import sxk.demo.spring1.pojo.Person;
+
 
 /**
  * spring配置了类
