@@ -1,4 +1,4 @@
-package sxk.demo.spring1.dao;
+package sxk.demo.spring.demo2.dao;
 
 import org.springframework.stereotype.Repository;
 

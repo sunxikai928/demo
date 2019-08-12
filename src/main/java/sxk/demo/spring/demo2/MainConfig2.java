@@ -1,12 +1,14 @@
-package sxk.demo.spring1.config;
+package sxk.demo.spring.demo2;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Service;
-import sxk.demo.spring1.dao.PersonDao;
-import sxk.demo.spring1.service.PersonService;
-import sxk.demo.spring1.web.PersonRest;
+import sxk.demo.spring.demo2.dao.PersonDao;
+import sxk.demo.spring.demo2.pojo.Person;
+import sxk.demo.spring.demo2.service.PersonService;
+import sxk.demo.spring.demo2.web.PersonRest;
 
 /**
  * spring配置了类
@@ -37,7 +39,7 @@ value：指定在该规则下过滤的表达式；
 @Configuration
 @ComponentScan(
         // 配置基础注解包
-        value = "sxk.demo.spring1",
+        value = "sxk.demo.spring.demo2",
         // 是否懒加载，默认是 false
         lazyInit = true,
         // 指定只包含的组件
@@ -58,5 +60,8 @@ value：指定在该规则下过滤的表达式；
         useDefaultFilters = false
 )
 public class MainConfig2 {
-
+    @Bean
+    public Person person() {
+        return new Person("李四", 26);
+    }
 }

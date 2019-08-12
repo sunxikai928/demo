@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--通过xml配置类-->
-    <bean id="person" class="sxk.demo.spring1.pojo.Person">
+    <bean id="person" class="sxk.demo.spring.demo2.pojo.Person">
         <constructor-arg name="name" value="张三"></constructor-arg>
         <constructor-arg name="age" value="15"></constructor-arg>
     </bean>

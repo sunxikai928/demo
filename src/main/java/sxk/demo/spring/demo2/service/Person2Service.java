@@ -1,7 +1,7 @@
-package sxk.demo.spring1.service;
+package sxk.demo.spring.demo2.service;
 
 import org.springframework.stereotype.Service;
-import sxk.demo.spring1.pojo.Person;
+import sxk.demo.spring.demo2.pojo.Person;
 
 /**
  * Created by sunxikai on 19/8/9.

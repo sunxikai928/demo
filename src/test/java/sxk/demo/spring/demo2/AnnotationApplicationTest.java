@@ -1,20 +1,13 @@
-package sxk.demo.spring1.config;
+package sxk.demo.spring.demo2;
 
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import sxk.demo.spring1.pojo.Person;
+import sxk.demo.spring.demo5.MainConfig5;
 
 /**
  * Created by sunxikai on 19/8/9.
  */
 public class AnnotationApplicationTest {
-
-    @Test
-    public void testMainConfig() {
-        AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(MainConfig.class);
-        Person person = (Person) app.getBean("person");
-        System.out.println("姓名:" + person.getName() + ",年龄:" + person.getAge());
-    }
 
     @Test
     public void testMainConfig2() {
@@ -44,9 +37,8 @@ public class AnnotationApplicationTest {
     }
 
     @Test
-    public void testMainConfig4() {
-        AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(MainConfig4.class);
-        System.out.println("容器加载完成");
-        app.getBean("person");
+    public void testMainConfig5() {
+        AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(MainConfig5.class);
+        System.out.println("容器创建完成");
     }
 }

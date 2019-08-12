@@ -1,4 +1,4 @@
-package sxk.demo.spring1.pojo;
+package sxk.demo.spring.demo2.pojo;
 
 /**
  * Created by sunxikai on 19/8/8.

@@ -1,4 +1,4 @@
-package sxk.demo.spring1.config;
+package sxk.demo.spring.demo2;
 
 import org.springframework.core.io.Resource;
 import org.springframework.core.type.AnnotationMetadata;
@@ -6,7 +6,7 @@ import org.springframework.core.type.ClassMetadata;
 import org.springframework.core.type.classreading.MetadataReader;
 import org.springframework.core.type.classreading.MetadataReaderFactory;
 import org.springframework.core.type.filter.TypeFilter;
-import sxk.demo.spring1.service.IPersonService;
+import sxk.demo.spring.demo2.service.IPersonService;
 
 import java.io.IOException;
 
@@ -15,6 +15,14 @@ import java.io.IOException;
  */
 public class MyBeanLoadFilter implements TypeFilter {
 
+    /**
+     * 当前正在扫描的类的信息，
+     *
+     * @param metadataReader        扫描器
+     * @param metadataReaderFactory
+     * @return
+     * @throws IOException
+     */
     @Override
     public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory) throws IOException {
         // 当前扫描的类的注解信息

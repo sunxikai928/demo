@@ -1,8 +1,8 @@
-package sxk.demo.spring1.xml;
+package sxk.demo.spring.xml;
 
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import sxk.demo.spring1.pojo.Person;
+import sxk.demo.spring.demo2.pojo.Person;
 
 /**
  * Created by sunxikai on 19/8/8.
