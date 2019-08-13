@@ -35,6 +35,6 @@ public class TigerFactoryBean implements FactoryBean<Tiger> {
      */
     @Override
     public boolean isSingleton() {
-        return false;
+        return true;
     }
 }

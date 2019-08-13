@@ -24,7 +24,7 @@ public class DemoImportBeanDefinitionRegistrar implements ImportBeanDefinitionRe
         // 如果存在容器中存在 littleDog 那么向容器中注册 Monkey
         if (registry.containsBeanDefinition("littleDog")) {
             RootBeanDefinition beanDefinition = new RootBeanDefinition(Monkey.class);
-            registry.registerBeanDefinition("sxk.demo.spring1.demo6.pojo.Monkey", beanDefinition);
+            registry.registerBeanDefinition("sxk.demo.spring.demo6.pojo.Monkey", beanDefinition);
         }
     }
 }
