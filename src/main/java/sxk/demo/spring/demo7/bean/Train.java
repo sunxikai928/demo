@@ -2,6 +2,7 @@ package sxk.demo.spring.demo7.bean;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -20,6 +21,9 @@ public class Train implements InitializingBean, DisposableBean {
 
     /**
      * 当属性都被赋值的时候调用
+     * 会在创建bean中，属性赋值之后执行
+     * 在 AbstractAutowireCapableBeanFactory 中的 doCreateBean 中的 initializeBean
+     * 最终在这个方法中调用 {@link AbstractAutowireCapableBeanFactory#invokeInitMethods}
      *
      * @throws Exception
      */
