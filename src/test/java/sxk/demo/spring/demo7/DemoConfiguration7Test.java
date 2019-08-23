@@ -1,10 +1,12 @@
-package sxk.demo.spring.demo7.conf;
+package sxk.demo.spring.demo7;
 
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import sxk.demo.spring.demo7.bean.Bike;
 import sxk.demo.spring.demo7.bean.Ship;
 import sxk.demo.spring.demo7.bean.Ship2;
+import sxk.demo.spring.demo7.conf.Demo2Configuration7;
+import sxk.demo.spring.demo7.conf.DemoConfiguration7;
 
 public class DemoConfiguration7Test {
 
@@ -36,6 +38,12 @@ public class DemoConfiguration7Test {
         ship.test2();
         Ship2 ship2 = (Ship2) app.getBean("ship2");
         ship2.test2();
+    }
+
+    @Test
+    public void test4() {
+        AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(Demo2Configuration7.class);
+        System.out.println(app.getBean("motorbikeAware").toString());
     }
 
 }

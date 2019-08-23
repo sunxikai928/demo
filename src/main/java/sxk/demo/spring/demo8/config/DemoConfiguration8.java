@@ -3,6 +3,7 @@ package sxk.demo.spring.demo8.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import sxk.demo.spring.demo8.bean.Bird;
 import sxk.demo.spring.demo8.bean.Dove2;
 import sxk.demo.spring.demo8.bean.Eagle;
@@ -27,6 +28,8 @@ import sxk.demo.spring.demo8.bean.Eagle;
  */
 @Configuration
 @ComponentScan(value = "sxk.demo.spring.demo8.bean")
+// 指定配置文件的位置
+@PropertySource("classpath:/demo8/test8.properties")
 public class DemoConfiguration8 {
 
     /*

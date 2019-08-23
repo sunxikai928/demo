@@ -94,4 +94,11 @@ public class DemoConfiguration8Test {
         bean.test1();
     }
 
+    @Test
+    public void test7() {
+        AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(DemoConfiguration8.class);
+        Swan bean = app.getBean(Swan.class);
+        System.out.println(bean.toString());
+    }
+
 }
