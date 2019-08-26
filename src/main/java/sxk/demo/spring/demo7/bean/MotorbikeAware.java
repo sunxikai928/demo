@@ -4,11 +4,12 @@ import org.springframework.beans.BeansException;
 import org.springframework.context.*;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.stereotype.Component;
 import org.springframework.util.StringValueResolver;
 
 /**
  * Aware ： 实现了指定的接口spring就会将指定的对象注入进来
+ * EnvironmentAware, EmbeddedValueResolverAware, ResourceLoaderAware,
+ * ApplicationEventPublisherAware, MessageSourceAware, ApplicationContextAware
  * 是通过 ApplicationContextAwareProcessor 进行注入的
  * ApplicationContextAwareProcessor 是在 容器 refresh 方法调用 prepareBeanFactory 方法的时候被加入 BeanPostProcessor 集合的
  *
@@ -28,7 +29,6 @@ public class MotorbikeAware implements EnvironmentAware, EmbeddedValueResolverAw
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
-        System.out.println("");
     }
 
     @Override
