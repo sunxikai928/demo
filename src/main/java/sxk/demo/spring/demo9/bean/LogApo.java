@@ -1,5 +1,6 @@
 package sxk.demo.spring.demo9.bean;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;
@@ -7,6 +8,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 /**
  * @author : sunxikai
@@ -26,8 +28,9 @@ public class LogApo {
     }
 
     @Before("log()")
-    public void before() {
+    public void before(JoinPoint joinPoint) {
         System.out.println("LogApo before");
+        System.out.println(joinPoint.getSignature().getName() + ":" + Arrays.asList(joinPoint.getArgs()));
     }
 
     @Around("log()")
@@ -43,14 +46,15 @@ public class LogApo {
         }
     }
 
-    @AfterReturning("log()")
-    public void afterReturning(){
-        System.out.println("LogApo afterReturning");
+    @AfterReturning(value = "log()", returning = "result")
+    public void afterReturning(Object result) {
+        System.out.println("LogApo afterReturning:" + result);
     }
 
-    @AfterThrowing("log()")
-    public void afterThrowing(){
-        System.out.println("LogApo afterThrowing");
+    @AfterThrowing(value = "log()", throwing = "exception")
+    public void afterThrowing(Exception exception) {
+        System.err.println("LogApo afterThrowing");
+        exception.printStackTrace();
     }
 
 }

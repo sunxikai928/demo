@@ -10,12 +10,13 @@ import org.springframework.stereotype.Component;
 public class Sun {
 
     @Log
-    public void shine() {
-        System.out.println("Sun shine.");
+    public String shine(int i) {
+        System.out.println("Sun shine." + i);
+        return "返回值";
     }
 
     @Log
-    public void shine1() {
-        int i = 1 / 0;
+    public void shine1(int n) {
+        int i = 1 / n;
     }
 }

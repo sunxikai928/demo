@@ -45,7 +45,7 @@ public class Demo9ConfigurationTest {
     public void test3() {
         AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(Demo9Configuration.class);
         Sun sun = (Sun) app.getBean("sun");
-        sun.shine();
+        sun.shine(3);
     }
 
     /**
@@ -61,7 +61,7 @@ public class Demo9ConfigurationTest {
     public void test4() {
         AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(Demo9Configuration.class);
         Sun sun = (Sun) app.getBean("sun");
-        sun.shine1();
+        sun.shine1(0);
     }
 
 }
