@@ -1,5 +1,6 @@
 package sxk.demo.spring.demo9.bean;
 
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 public class Sun {
 
     @Log
+    @Async
     public String shine(int i) {
         System.out.println("Sun shine." + i);
         return "返回值";
